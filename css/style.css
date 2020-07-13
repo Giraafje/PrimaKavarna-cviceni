@@ -1,0 +1,328 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,h2,h3,h4,p,ul,ol,li,body {
+    margin: 0;
+    padding: 0;
+    }
+    
+*, *:after, *:before {
+    box-sizing: border-box;
+    }
+
+a {
+    transition: all 0.3s ease-out;
+    }
+
+a:hover {
+    transition: all 0.3s ease-out;
+    }
+
+.container {
+    width: 1100px;
+    margin: auto;
+}
+
+.headerMenu {
+    background-color: rgba(72, 52, 42, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.headerMenu .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 50px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.menu ul li {
+    display: inline-block;
+}
+
+.menu ul li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    padding: 34px 10px;
+    display: block;
+}
+
+.menu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+header {
+    background: url("../img/header.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+.headerDescription {
+    color: #fff;
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+    padding-top: 351px;
+    padding-bottom: 45px;
+}
+
+.headerDescription p {
+    margin: 20px 0;
+}
+
+.underlined {
+    font-size: 100px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid #fff;
+    display: inline-block;
+}
+
+.headerDescription a {
+    color: #fff;
+    font-size: 37px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.headerDescription .fa-facebook-f:hover {
+    color: #3b5999;
+}
+
+.headerDescription .fa-instagram:hover {
+    color: #e4405f;
+}
+
+.headerDescription .fa-youtube:hover {
+    color: #cd201f;
+}
+
+.onas {
+    padding-top: 70px;
+    padding-bottom: 45px;
+    text-align: center;
+}
+
+.nasPribeh {
+    font-size: 14px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Kaushan Script', cursive;    
+}
+
+h1 {
+    font-size: 55px;
+    padding-bottom: 35px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.oNasPopis {
+    line-height: 26px;
+}
+
+.onasPrvky {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 70px;
+}
+
+.prvkyBox {
+    flex: 0 1 300px;
+}
+
+.prvkyBox img {
+    padding-bottom: 34px;
+}
+
+.prvkyBox h2 {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #707070;
+    display: inline-block;
+}
+
+.prvkyBox p {
+    padding-top: 33px;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.button {
+    border: 1px solid #000;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #000;
+    margin-top: 30px;
+    display: inline-block;
+
+}
+
+.button:hover {
+    color: #A0785D;
+    border: 1px solid  #A0785D;
+}
+
+.button:hover i {
+    transform: translateX(5px);
+}
+
+.brown {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.brownText {
+    background-color: #A0785D;
+    color: #fff;
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.brown img {
+    width: 50%;
+}
+
+.brownPopis {
+    text-align: right;
+    padding: 60px 30px 60px 0;
+    width: 70%;
+}
+
+.brownPopis h2 {
+    padding-bottom: 50px;
+}
+
+.brownPopis h2:nth-of-type(2) {
+    padding-top: 70px;
+}
+
+.brownPopis p {
+    line-height: 26px;
+}
+
+.brownObdelnik {
+    background-color: rgba(160, 120, 93, 0.5);
+    width: 15%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -15%;
+}
+
+.tip {
+    padding: 80px 0;
+}
+
+.tip .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tip .container .tipObr {
+    display: flex;
+    justify-content: space-between;
+    flex: 0 1 60%;
+}
+
+.tip .container .tipText {
+    flex: 0 1 30%;
+}
+
+.tip .container .tipText h2 {
+    padding-bottom: 50px;
+}
+
+.tip .container .tipText p {
+    font-size: 16px;
+    line-height: 26px;
+    padding-bottom: 16px;
+}
+
+.tip .container .obdelnikObr {
+    position: relative;
+    background-color: #A0785D;
+    width: 300px;
+    height: 450px;
+}
+
+.tip .container .obdelnikObr img {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+}
+
+/* Footer */
+.brownFooter {
+    background-color: #805F49;
+    padding-bottom: 80px;
+}
+
+.brownFooter .container {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+.brownFooter .container h3 {
+    padding-bottom: 44px;
+    padding-top: 88px;
+}
+
+.brownFooter .container .menuFooter ul li {
+    list-style: none;
+}
+
+.brownFooter .container .menuFooter ul li a {
+    text-decoration: none;
+    color:  #fff;
+    text-transform: lowercase;
+}
+
+.brownFooter .container .menuFooter ul li a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.brownFooter .container .menuFooter ul li:first-letter {
+    text-transform: uppercase;
+}
+
+.brownFooter .container .fbPluginFooter {
+    width: 340px;
+    height: 155px;
+    background-color: #fff;
+    margin-top: 88px;
+}
+
+.whiteFooter {
+    padding: 20px 0;
+}
+
+.whiteFooter .container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.whiteFooter .container a {
+    color: #555;
+    text-decoration: none;
+}
+
+.whiteFooter .container a:hover {
+    color: #A0785D;
+    text-decoration: underline;
+}
