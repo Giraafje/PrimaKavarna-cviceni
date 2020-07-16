@@ -1,41 +1,5 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PrimaKavárna</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <div class="headerMenu">
-            <div class="container">
-                <a href="#" class="logo">PrimaKavárna</a>
-                <div class="menu">
-                    <ul>
-                        <li><a href="#">o nás</a></li>
-                        <li><a href="#">nabídka</a></li>
-                        <li><a href="#">kontakt</a></li>
-                        <li><a href="#">rezervace</a></li>
-                        <li><a href="#">novinky</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="headerDescription">
-            <div class="underlined">
-                PrimaKavárna
-            </div>
-            <p>Jsme tu pro vás již od roku 2002</p>
-            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
-        </div>
-    </header>
-    <section>
+<?php get_header(); ?>
+<section>
         <div class="onas">
             <div class="container">
                 <p class="nasPribeh">Náš příběh</p>
@@ -43,7 +7,7 @@
                 <p class="oNasPopis">Naše PrimaKavárna je originální a příjemné místo inspirované prostředím francouzských kaváren. V nabídce najdete prvotřídní vína z Francie, Itálie  i Čech. Především pro pány máma čepované  tradiční české pivo Únětice a řadu lahodných lehkých jídel. Nechybí skvělá káva a dobré čaje, a tak si každý přijde na své. Návštěvou naší kavárny potěšíte nejen své chuťové buňky, ale také potrápíte mozkové závity při hraní deskových her, které si můžete vypůjčit :).</p>
                 <div class="onasPrvky">
                     <div class="prvkyBox">
-                        <img src="img/coffee-300.jpg" alt="obrazek kavy">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/coffee-300.jpg" alt="obrazek kavy">
                         <div class="boxText">
                             <h2>Káva</h2>
                             <p>Kávovník je ovocný strom, jehož plodem jsou peckovice. Kávová zrna jsou tedy vlastně pecky kávových třešní. Samotný plod je jedlý a sušený se v některých zemích používá k výrobě čaje zvaného cascara.</p>
@@ -52,7 +16,7 @@
                         </div>
                     </div>
                     <div class="prvkyBox">
-                        <img src="img/ice-300.jpg" alt="obrazek dezertu">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/ice-300.jpg" alt="obrazek dezertu">
                         <div class="boxText">
                             <h2>Zákusky</h2>
                             <p>Obecně si pod zákusky představujeme sladké výrobky cukrárenského typu, jejichž příprava je složitější nebo vyžaduje specifické pomůcky. Většinu typů hotových zákusků je nutné skladovat v chladu.</p>
@@ -61,7 +25,7 @@
                         </div>
                     </div>
                     <div class="prvkyBox">
-                        <img src="img/club-300.jpg" alt="obrazek hranolek">
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/club-300.jpg" alt="obrazek hranolek">
                         <div class="boxText">
                             <h2>Dobroty</h2>
                             <p>Dáváme si záležet na tom, aby naše pokrmy byly lehké, jednoduché a chutné. Ze zásady pracujeme pouze s chlazeným masem, pečivo si připravujeme sami, vyhýbáme se polotovarům a snažíme se připravovat všechny pokrmy kompletně sami - to je naše vnímání domácí kuchyně.</p>
@@ -81,16 +45,16 @@
                 </div>
                 <div class="brownObdelnik"></div>
             </div>
-            <img src="img/coffee-big-960.jpg" alt="zrnka kavy" />
+            <img src="<?php echo get_template_directory_uri(); ?>/img/coffee-big-960.jpg" alt="zrnka kavy" />
         </div>
         <div class="tip">
             <div class="container">
                 <div class="tipObr">
                     <div class="obdelnikObr">
-                        <img src="img/cooking-300.jpg" alt="kuchar"/>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/cooking-300.jpg" alt="kuchar"/>
                     </div>
                     <div class="obdelnikObr">
-                        <img src="img/bread-300.jpg" alt="chleb"/>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/bread-300.jpg" alt="chleb"/>
                     </div>
                 </div>
                 <div class="tipText">
@@ -102,45 +66,4 @@
             </div>
         </div>
     </section>
-    <footer>
-        <div class="brownFooter">
-            <div class="container">
-                <div class="menuFooter" class="footerBox">
-                    <h3>Menu</h3>
-                    <ul>
-                        <li><a href="#">o nás</a></li>
-                        <li><a href="#">nabídka</a></li>
-                        <li><a href="#">kontakt</a></li>
-                        <li><a href="#">rezervace</a></li>
-                        <li><a href="#">novinky</a></li>
-                        <li class="facebookItem"><a href="#">facebook</a></li>
-                    </ul>
-                </div>
-                <div class="kontaktFooter" class="footerBox">
-                    <h3>Kontakt</h3>
-                    <p>PrimaKavárna</p>
-                    <p>Jablonského 2, Praha</p>
-                    <p>Holešovice</p>
-                </div>
-                <div class="otevDobaFooter" class="footerBox">
-                    <h3>Otevírací doba</h3>
-                    <p><strong>Po - Pá:</strong> 8h - 20h</p>
-                    <p><strong>So:</strong> 10h - 22h</p>
-                    <p><strong>Ne:</strong> 12h - 20h</p>
-                </div>
-                <div class="fbPluginFooter" class="footerBox"></div>
-            </div>
-        </div>
-        <div class="whiteFooter">
-            <div class="container">
-                <div class="copyright">
-                    <p>&copy; copyright 2020<strong> PrimaKavárna <span>/</span> <a href="#">Ochrana osobních údajů</a> <span>/</span> <a href="#">O cookies</a></strong></p>
-                </div>
-                <div class="createdBy">
-                    <p>Vytvořila: <strong><a href="#" target="_blank">Lenka Erbenová</a></strong></p>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+    <?php get_footer(); ?>

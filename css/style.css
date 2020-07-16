@@ -20,9 +20,25 @@ a:hover {
     }
 
 .container {
-    width: 1100px;
+    /* width: 1100px; */
     margin: auto;
 }
+
+@media screen and (max-width: 479px) {
+    .container {width: 92%}
+    }
+@media screen and (min-width: 480px) {
+    .container {width: 95%}
+    }
+@media screen and (min-width: 740px) {
+    .container {width: 95%}
+    }
+@media screen and (min-width: 960px) {
+    .container {width: 95%}
+    }
+@media screen and (min-width: 1200px) {
+    .container {width: 1100px}
+    }
 
 .headerMenu {
     background-color: rgba(72, 52, 42, 0.7);
@@ -59,6 +75,33 @@ a:hover {
     background-color: rgba(255, 255, 255, 0.3);
 }
 
+@media screen and (max-width: 840px) {
+    .menu ul li a {
+        padding: 34px 5px;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .headerMenu .container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .menu ul li {
+        display: block;
+    }
+    .menu ul li a {
+        padding: 10px;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 350px) {
+    .logo {
+        font-size: 40px;
+    }
+}
+
 header {
     background: url("../img/header.jpg") center center no-repeat;
     background-size: cover;
@@ -81,6 +124,12 @@ header {
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
     border-bottom: 1px solid #fff;
     display: inline-block;
+}
+
+@media screen and (max-width: 700px) {
+    .underlined {
+        font-size: 14vw;
+    }
 }
 
 .headerDescription a {
@@ -175,6 +224,46 @@ h2 {
     transform: translateX(5px);
 }
 
+@media screen and (max-width: 990px) {
+    .prvkyBox img {
+        width: 94%;
+    }
+    .onasPrvky p {
+        padding: 0 10px 20px;
+
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .onasPrvky {
+        flex-direction: column;
+    }
+    .prvkyBox img {
+        width: 300px;
+        height: 200px;
+    }
+    .prvkyBox {
+        display: flex;
+        margin-bottom: 25px;
+    }
+    .onasPrvky h2 {
+        margin: 0 0 25px 0;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .prvkyBox {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .prvkyBox img {
+        width: 100%;
+    }
+}
+
 .brown {
     display:flex;
     flex-wrap: wrap;
@@ -220,6 +309,22 @@ h2 {
     right: -15%;
 }
 
+@media screen and (max-width: 1000px) {
+    .brownPopis {
+        width: 100%;
+        padding: 60px 30px 60px 10px;
+    }
+}
+
+@media screen and (max-width: 900px) { 
+    .brown img, .brownObdelnik{
+        display: none;
+    }
+    .brownText {
+        width: 100%;
+    }
+}
+
 .tip {
     padding: 80px 0;
 }
@@ -260,6 +365,37 @@ h2 {
     position: absolute;
     top: -20px;
     left: -20px;
+}
+
+@media screen and (max-width: 1120px) {
+    .tip .container .obdelnikObr img {
+        width: 20vw;
+        height: 29vw;
+    }
+    .tip .container .obdelnikObr {
+        width: 20vw;
+        height: 29vw;
+    }
+    .tip .container .tipObr {
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .tip .container {
+        flex-direction: column;
+    }
+    .tip .container .obdelnikObr img {
+        width: 30vw;
+        height: 39vw;
+    }
+    .tip .container .obdelnikObr {
+        width: 30vw;
+        height: 39vw;
+    }
+    .tip .container .tipText h2{
+        padding: 30px 0;
+    }
 }
 
 /* Footer */
@@ -307,6 +443,35 @@ h2 {
     margin-top: 88px;
 }
 
+@media screen and (min-width: 801px) {
+    .facebookItem {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .fbPluginFooter {
+        display: none;
+    }
+    .brownFooter .container {
+        justify-content: space-evenly;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .brownFooter .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .brownFooter .container h3  {
+        padding: 20px 0;
+    }
+    .brownFooter .container .menuFooter {
+        padding-top: 40px;
+    }
+}
+
+
 .whiteFooter {
     padding: 20px 0;
 }
@@ -325,4 +490,187 @@ h2 {
 .whiteFooter .container a:hover {
     color: #A0785D;
     text-decoration: underline;
+}
+
+@media screen and (max-width: 720px) {
+    .copyright a {
+        display: block;
+    }
+    .copyright span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .whiteFooter .container {
+        flex-direction: column;
+    }
+    .copyright {
+        margin-bottom: 15px;
+    }
+}
+
+/* error404 */
+.notFound {
+    margin: 40px;
+}
+
+.notFound img {
+    display: block;
+    margin: 30px auto;
+    width: 60%;
+}
+
+.notFound p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.notFound .btn a {
+    background-color:  #805F49;
+    color: #fff;
+    padding: 5px 10px;
+    border: 1px solid  #805F49;
+    border-radius: 5px;
+    display: block;
+    width: 12rem;
+    margin: 30px auto;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: 700;
+
+}
+
+.notFound a:hover {
+    color: #000;
+}
+
+/* Kontakt */
+
+.contactMain {
+    margin: 40px 0;
+}
+
+.contactMain h1 {
+    text-align: center;
+}
+
+.contactMain .container .contactSection {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    line-height: 26px;
+}
+
+.contactMain .container .contactSection h2 {
+    padding-bottom: 35px;
+}
+
+.contactMain .container .contactSection i {
+    margin-right: 16px;
+    /* width: 35px; zarovnani textu na stejnou uroven */
+}
+
+.contactMain .container .contactSection .address p:nth-of-type(1) {
+    font-weight: 700;
+}
+
+.contactMain .container .contactSection .address p:nth-of-type(2) {
+    font-weight: 700;
+    color: #A0785D;
+
+}
+
+.contactMain .container .contactSection .address p i:nth-of-type(1) {
+    color: #000;
+
+}
+
+.contactMain .container .contactSection .address a {
+    color: #000;
+    text-decoration: none;
+}
+
+.contactMain .container .contactSection .address a:hover {
+    color:  #A0785D;
+}
+
+.contactMain .container .paymentSection .payment {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contactMain .container .paymentSection .payment i:nth-of-type(2) {
+    margin-right: 8px;
+}
+
+.map {
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+}
+
+.map iframe {
+    width: 100%;
+}
+
+.contactForm {
+    margin: 40px 0;
+}
+
+.contactForm .container h2 {
+    text-align: center;
+    padding-bottom: 35px;
+}
+
+.contactForm input[type="text"] {
+    padding: 15px;
+    display: block;
+    font-size: 16px;
+    width: 70%;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+}
+
+.contactForm input[type="email"] {
+    padding: 15px;
+    display: block;
+    font-size: 16px;
+    width: 70%;
+    margin: 0 auto 5px;
+    border: 1px solid #ccc;
+}
+
+.contactForm textarea {
+    padding: 15px;
+    display: block;
+    font-size: 16px;
+    width: 70%;
+    margin: 0 auto 5px;
+    border: 1px solid #ccc;
+    height: 12rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contactForm input[type="submit"] {
+    padding: 15px;
+    display: block;
+    font-size: 16px;
+    width: 15%;
+    margin: 30px auto 5px;
+    text-transform: uppercase;
+    background-color: red;
+    border-radius: 10px;
+    border: 2px solid red;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.contactForm input[type="submit"]:hover {
+    background: transparent;
+    color: red;
+    transition: all 0.3s ease-out;
 }
