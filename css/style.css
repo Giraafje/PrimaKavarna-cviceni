@@ -22,6 +22,7 @@ a:hover {
 .container {
     /* width: 1100px; */
     margin: auto;
+    /* position: relative;*/
 }
 
 @media screen and (max-width: 479px) {
@@ -75,7 +76,7 @@ a:hover {
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-@media screen and (max-width: 840px) {
+/* @media screen and (max-width: 840px) {
     .menu ul li a {
         padding: 34px 5px;
     }
@@ -95,7 +96,133 @@ a:hover {
         padding: 10px;
         text-align: center;
     }
-}
+} */
+
+/*Hamburger*/
+.mmenu-icon-wrapper {
+    position: absolute;
+    top: 4.1em;
+    right: 1.5em;
+    height: 26px;
+    width: 26px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  @media screen and (min-width: 480px) {
+      .mmenu-icon-wrapper {
+        top: 4.3em;
+      }
+  }
+  
+  @media screen and (min-width: 768px) {
+      .mmenu-icon-wrapper {
+        top: 4.1em;
+      }
+  }
+  
+  .mmenu-icon,
+  .mmenu-icon:before,
+  .mmenu-icon:after {
+    content: '';
+    position: absolute;
+    border-radius: 1em;
+    height: 2px;
+    width: 26px;
+    background: white;
+    transition: all 0.2s ease
+  }
+  
+  .mmenu-icon {
+    top: 0.75em
+  }
+  
+  .mmenu-icon:before {
+    top: -0.50em
+  }
+  
+  .mmenu-icon:after {
+    top: 0.50em
+  }
+  
+  .mmenu-active .mmenu-icon {
+    background: transparent;
+    transform: rotate(-135deg)
+  }
+  
+  .mmenu-active .mmenu-icon:before,
+  .mmenu-active .mmenu-icon:after {
+    top: 0
+  }
+  
+  .mmenu-active .mmenu-icon:before {
+    transform: rotate(90deg)
+  }
+  
+  .mmenu-active .mmenu-icon,
+  .mmenu-active .mmenu-icon:before,
+  .mmenu-active .mmenu-icon:after {
+    background: white
+  }
+  
+  .mmenu-menu {
+    transition: all 0.4s ease;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    color: white;
+    text-align: center;
+    z-index: 2;
+  }
+  
+  .mmenu-active .mmenu-menu {
+    opacity: 1;
+    pointer-events: initial;
+  }
+  
+  .mmenu-menu ul {
+    display: block;
+    transition: all 0.4s ease;
+    padding: 0;
+    list-style-type: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    font-size: 20px;
+    line-height: 200%;
+  }
+  
+  .mmenu-menu ul li a {
+      color: #fff;
+      text-decoration: none;
+  }
+  
+  .mmenu-menu ul li a:hover {
+      color: #5d9242;
+  }
+  
+  .mmenu-active .mmenu-menu ul {
+    transform: translate(-50%, -50%) scale(1)
+  }
+  
+  @media screen and (max-width: 960px) {
+      .menu {
+          display: none;
+      }
+  }
+  
+  @media screen and (min-width: 960px) {
+      .mmenu-menu, .mmenu-icon-wrapper {
+          display: none !important;
+      }
+  }
+  
 @media screen and (max-width: 350px) {
     .logo {
         font-size: 40px;
@@ -167,7 +294,8 @@ h1, h2, h3, h4 {
 
 h1 {
     font-size: 55px;
-    padding-bottom: 35px;
+    padding-top: 35px;
+    text-align: center;
 }
 
 h2 {
@@ -204,7 +332,7 @@ h2 {
     line-height: 22px;
 }
 
-.button {
+.button, .older a, .newer a {
     border: 1px solid #000;
     padding: 10px 25px;
     border-radius: 5px;
@@ -215,9 +343,10 @@ h2 {
 
 }
 
-.button:hover {
+.button:hover, .older a:hover, .newer a:hover {
     color: #A0785D;
     border: 1px solid  #A0785D;
+    text-decoration: underline;
 }
 
 .button:hover i {
@@ -439,7 +568,7 @@ h2 {
 .brownFooter .container .fbPluginFooter {
     width: 340px;
     height: 155px;
-    background-color: #fff;
+    /* background-color: #fff; */
     margin-top: 88px;
 }
 
@@ -673,4 +802,496 @@ h2 {
     background: transparent;
     color: red;
     transition: all 0.3s ease-out;
+}
+
+/*Rezervace*/
+
+.reservationMain {
+    padding-bottom: 20px;
+}
+
+.reservationMain .container p {
+    padding-top: 30px;
+}
+
+.reservationMain .container .reservationContact {
+    margin: 20px 0;
+    line-height: 26px;
+}
+
+.reservationMain .container .reservationContact i {
+    margin-right: 20px;
+}
+
+.reservationMain .container .reservationContact span {
+    font-weight: 700;
+    color: #A0785D;
+}
+
+.reservationMain .container .reservationContact a {
+    text-decoration: none;
+    color: #000;
+}
+
+.reservationMain .container .reservationContact a:hover {
+    color: #A0785D;
+}
+
+.reservationMain .container h2 {
+    text-align: center;
+}
+
+.reservationForm .wpcf7-text {
+    padding: 15px;
+    font-size: 16px;
+    width: 70%;
+    margin: 0 auto 5px;
+    border: 1px solid #ccc;
+    display: block;
+}
+
+.reservationForm .wpcf7-textarea {
+    padding: 15px;
+    display: block;
+    font-size: 16px;
+    width: 70%;
+    margin: 0 auto 5px;
+    border: 1px solid #ccc;
+    height: 12rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.reservationForm p {
+    text-align: center;
+}
+
+.reservationForm p a {
+    text-decoration: none;
+    font-weight: 700;
+    color: red;
+}
+
+.reservationForm p a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.reservationForm .wpcf7-submit {
+    padding: 15px;
+    display: block;
+    font-size: 16px;
+    width: 15%;
+    margin: 5px auto 30px auto;
+    text-transform: uppercase;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid red;
+    color: red;
+    font-weight: 700;
+    letter-spacing: 3px;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+
+.reservationForm .wpcf7-submit:hover {
+    border: 2px solid black;
+    color: black;
+}
+
+.reservationForm ul {
+    display: none;
+}
+
+.reservationForm .screen-reader-response {
+    display: none;
+}
+
+.reservationForm .wpcf7-mail-sent-ok {
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.sablona h1 {
+    color: darkgreen;
+}
+
+.sablona p {
+    color: darkblue;
+}
+
+.sablona section {
+    background-color: salmon;
+}
+
+/*Galerie*/
+.galerie {
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.galerie h2 {
+    padding: 25px 0;
+}
+
+/*60% sirky kontejneru*/
+
+.galerieText {
+    width: 60%;  
+    margin: auto; 
+    line-height: 28px;   
+    padding-bottom: 50px;   
+}
+
+.galerie .fotky img {
+    border-radius: 5px;
+    margin: 3px;
+    width: 95%;
+    border: none !important;
+}
+                
+.galerie .fotky img:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/*Nabidka*/
+.offer .container p {
+    padding-top: 30px;
+}
+
+.offer a {
+    margin: 30px auto;
+    display: block;
+    width: 80px;
+}
+
+.imgOffer {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0;
+}
+
+.imgOfferBox {
+    width: 25%;
+}
+
+.imgOfferBox h2 {
+    text-transform: uppercase;
+    color: #fff;  
+    line-height: 333px;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.imgAndDescr1 {
+    background: url("../img/morning-500.jpg") center center no-repeat;
+    background-size: cover;
+    height: 333px;
+    margin-bottom: 20px;  
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.imgAndDescr1:hover, .imgAndDescr2:hover, .imgAndDescr3:hover, .imgAndDescr4:hover {
+    filter: grayscale(80%);
+
+}
+
+.imgAndDescr2 {
+    background: url("../img/abundance-500.jpg") center center no-repeat;
+    background-size: cover;
+    height: 333px;
+    margin-bottom: 20px;
+}
+
+.imgAndDescr3 {
+    background: url("../img/hamburger-500.jpg") center center no-repeat;
+    background-size: cover;
+    height: 333px;
+    margin-bottom: 20px;  
+}
+
+.imgAndDescr4 {
+    background: url("../img/strawberry-500.jpg") center center no-repeat;
+    background-size: cover;
+    height: 333px;
+    margin-bottom: 20px;
+}
+
+.offerDescr p {
+    line-height: 26px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1140px) {
+    .imgOffer {
+        flex-direction: column;
+        justify-content: center;
+    } 
+
+    .imgOfferBox {
+        display: flex;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .imgAndDescr1, .imgAndDescr2, .imgAndDescr3, .imgAndDescr4 {
+        width: 50%;
+    }
+
+    .offerDescr {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .imgOfferBox {
+        flex-direction: column;
+    }
+
+    .offerDescr {
+        padding-bottom: 20px;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .imgAndDescr1, .imgAndDescr2, .imgAndDescr3, .imgAndDescr4 {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
+
+/*Blog*/
+.blog {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.blog:last-of-type {
+    border: none;
+}
+
+.blog img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+.obr-blog {
+    width: 200px;
+    margin-right: 30px;
+}
+
+.blogText {
+    width: 70%;
+}
+
+.blogText h2 a {
+    color: #000;
+    text-decoration: none;
+    padding-bottom: 25px;
+}
+
+.blogText h2 a:hover {
+    color:  #A0785D;
+    text-decoration: underline;
+}
+
+.blogText h2 {
+    padding-bottom: 30px;
+}
+
+.blogText span {
+    display: block;
+    padding-bottom: 5px;
+}
+
+.blogText span i {
+    width: 40px;
+    margin-bottom: 8px;
+}
+
+.blogText span a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+}
+
+.blogText span a:hover {
+    color:  #A0785D;
+    text-decoration: underline;
+}
+
+.older {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.newer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.button:hover i, .older:hover i {
+    transform: translateX(5px);
+}
+
+.newer:hover i {
+    transform: translateX(-5px);
+}
+
+/*Single*/
+.prispevek {
+    padding-bottom: 80px;
+}
+.ikony {
+    text-align: center;
+    padding: 25px 0;
+}
+.ikony span {
+    margin-right: 25px;
+}
+.ikony span i {
+    margin-right:10px;
+}
+.ikony span a {
+    color: #A0785D;
+    text-decoration: none;
+    font-weight: 700;
+}
+.ikony span a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+.prispevek h2 {
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0;
+    margin: 0 auto 20px;
+    width: 50%;
+    text-align: center;
+}
+.prispevek h3 {
+    padding: 15px 0;
+}
+.prispevek p {
+    text-align: justify;
+    padding: 10px 0;
+}
+.prispevek ul li {
+    margin-left: 30px;
+}
+.prispevek ol li {
+    padding-left: 30px;
+}
+.prispevek li {
+    line-height: 28px;
+}
+/*Vyhledávání*/
+.sb-search {
+    text-align: center;
+    padding: 20px 0;
+}
+.sb-search input[type="text"] {
+    font-size: 16px;
+    padding: 15px;
+    width: 30%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 20px;
+    
+}
+.sb-search input[type="submit"] {
+    padding: 15px 30px;
+    border: 1px solid #ccc;
+    background: transparent;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease-out;
+}
+.sb-search input[type="submit"]:hover {
+    background: #A0785D;
+    cursor: pointer;
+    color: #fff;
+}
+
+/*Bonus*/
+
+.bonus {
+    padding-bottom: 80px;
+}
+
+.bonus h2 {
+    padding-bottom: 20px;
+}
+
+.bonus p {
+    padding: 10px 0;
+}
+
+.seznam {
+    border: 1px solid #000;
+    background-color: #ccc;
+    width: 30%;
+    padding: 20px;
+}
+
+.seznam ul {
+    margin-left: 30px;
+    line-height: 26px;
+}
+
+.seznam ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.seznam ul li a:hover {
+    color: #A0785D;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.seznam {
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.headerLog {
+    background: rgba(72, 52, 42, 0.9);
+    font-size: 14px;
+    text-align: right;
+}
+
+.prihlaseni li {
+    display: inline-block;
+    border: 1px solid #fff;
+    background-color: #000;
+    padding: 10px;
+    color: #fff;
+    margin-top: 30px;
+    font-weight: 700;
+    margin: 5px 10px;
+}
+
+.prihlaseni li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+}
+
+.prihlaseni li a:hover {
+    text-decoration: underline;
+    color:  #A0785D;
+}
+
+
+/*Singleheader*/
+.singleblog {
+    height: 300px;
 }

@@ -1,4 +1,9 @@
 <?php get_header(); ?>
+<?php
+	/* header pro podstránku se načítá ze souboru sub-header.php */
+	require 'hp-header.php';
+?>
+
 <section>
         <div class="onas">
             <div class="container">

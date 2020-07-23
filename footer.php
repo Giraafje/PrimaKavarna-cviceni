@@ -4,11 +4,11 @@
                 <div class="menuFooter" class="footerBox">
                     <h3>Menu</h3>
                     <ul>
-                        <li><a href="#">o nás</a></li>
-                        <li><a href="#">nabídka</a></li>
-                        <li><a href="#">kontakt</a></li>
-                        <li><a href="#">rezervace</a></li>
-                        <li><a href="#">novinky</a></li>
+                        <li><a href="<?php echo get_option('home'); ?>/">o nás</a></li>
+                        <li><a href="<?php echo get_option('home'); ?>/nabidka">nabídka</a></li>
+                        <li><a href="<?php echo get_option('home'); ?>/kontakt">kontakt</a></li>
+                        <li><a href="<?php echo get_option('home'); ?>/rezervace">rezervace</a></li>
+                        <li><a href="<?php echo get_option('home'); ?>/blog">novinky</a></li>
                         <li class="facebookItem"><a href="#">facebook</a></li>
                     </ul>
                 </div>
@@ -24,7 +24,9 @@
                     <p><strong>So:</strong> 10h - 22h</p>
                     <p><strong>Ne:</strong> 12h - 20h</p>
                 </div>
-                <div class="fbPluginFooter" class="footerBox"></div>
+                <div class="fbPluginFooter" class="footerBox">
+                <div class="fb-page" data-href="https://www.facebook.com/primakurzy" data-tabs="" data-width="340" data-height="155" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/primakurzy" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/primakurzy">PrimaKurzy.cz</a></blockquote></div>
+                </div>
             </div>
         </div>
         <div class="whiteFooter">
@@ -38,5 +40,30 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.getElementById('mmenu').addEventListener('click', checkNav);
+        window.addEventListener("keyup", function(e) {
+            if (e.keyCode == 27) closeNav();
+        }, false);
+        
+        function checkNav() {
+            if (document.body.classList.contains('mmenu-active')) {
+            closeNav();
+            } else {
+            openNav();
+            }
+        }
+        
+        function closeNav() {
+            document.body.classList.remove('mmenu-active');
+        }
+        
+        function openNav() {
+            document.body.classList.add('mmenu-active');
+        }
+    </script>
+
+    <?php wp_footer(); ?>
+
 </body>
 </html>

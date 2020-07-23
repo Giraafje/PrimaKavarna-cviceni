@@ -1,4 +1,9 @@
 <?php get_header(); ?>
+
+<?php
+	/* header pro podstránku se načítá ze souboru sub-header.php */
+	require 'sub-header.php';
+?>
     <div class="notFound">
         <div class="container">
             <img src="<?php echo get_template_directory_uri(); ?>/img/error404.jpg" alt="error 404">
